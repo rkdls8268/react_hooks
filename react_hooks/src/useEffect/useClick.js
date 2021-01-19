@@ -27,6 +27,7 @@ const App = () => {
     // reference 사용
     const potato = useRef();
     setTimeout(() => potato.current?.focus(), 3000);
+    // ? 사용하지 않으면 오류남. 아마 mount가 너무 빨리되어서 potato.current가 극 초반에는 존재하지 않게 되므로 오류나는 것 같다.
     return (
         <div>
             <h1 ref={title}>Hello</h1>
