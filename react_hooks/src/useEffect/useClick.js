@@ -3,10 +3,13 @@ import React, {useEffect, useRef} from "react";
 // 누군가 element를 클릭했을 때 function을 실행시킬 것 
 const useClick = (onClick) => {
     const element = useRef();
-    // if (typeof onClick !== "function") {
-    //     return;
-    // }
+    
     useEffect(() => {
+        // condition syntax(if)는 useEffect와 쓰일 수 없다고 함.
+        // useEffect() 안에서 if문 사용해주면 해결됨.
+        if (typeof onClick !== "function") {
+            return;
+        }
         const e = element.current;
         if (e) {
             e.addEventListener("click", onClick); // onClick 이벤트 처리

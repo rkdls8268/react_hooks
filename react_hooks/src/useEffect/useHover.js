@@ -3,10 +3,11 @@ import React, {useRef, useEffect} from 'react';
 const useHover = (onHover) => {
     const element = useRef();
     const e = element.current;
-    // if (typeof onHover !== "function") {
-    //     return;
-    // }
+    
     useEffect(() => {
+        if (typeof onHover !== "function") {
+            return;
+        }
         if (e) {
             e.addEventListener("mouseenter", onHover);
         }
