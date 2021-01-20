@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import App from './useEffect/useFadeIn';
+import App from './useEffect/useNetwork';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
