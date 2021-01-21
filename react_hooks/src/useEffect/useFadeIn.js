@@ -1,5 +1,5 @@
-// 기본적으로 하나의 element를 가지는데 서서이 fadein 시킬 것
-// css를 가지고도 만들 수 있는데 animation을 우리 hooks에 포함시키는 방법을 알아보도록 하자.
+// 기본적으로 하나의 element를 가지는데 서서이 fade in 시킬 것
+// css를 가지고도 만들 수 있는데 animation을 우리 hooks에 포함시키는 방법을 알아보자
 import React, {useEffect, useRef} from "react";
 
 const useFadeIn = (duration = 1, delay = 0) => {
